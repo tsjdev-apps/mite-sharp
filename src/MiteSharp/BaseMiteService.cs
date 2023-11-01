@@ -29,10 +29,7 @@ namespace MiteSharp
             try
             {
                 MiteResponse<T> response = await requestFunc().ConfigureAwait(false);
-
-                return response != null && response.Response != null
-                    ? new MiteResponse<T>(response.Response)
-                    : new MiteResponse<T>("Response was null");
+                return new MiteResponse<T>(response.Response);
             }
             catch (ApiException apiException)
             {
