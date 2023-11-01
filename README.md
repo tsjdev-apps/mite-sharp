@@ -164,6 +164,25 @@ Task<MiteResponse<Service>> GetByIdAsync(int serviceId, CancellationToken ct = d
 Task<MiteResponse<Service>> UpdateAsync(int serviceId, ServiceRequest serviceRequest, CancellationToken ct = default);
 ```
 
+### MiteTrackerService
+
+```csharp
+/// <summary>
+///     Stops the tracker asynchronously
+/// </summary>
+Task<MiteResponse<StoppedTimeEntry>> StopTrackerAsync(int timeEntryId, CancellationToken ct = default);
+
+/// <summary>
+///     Gets the tracker asynchronously
+/// </summary>
+Task<MiteResponse<TrackingTimeEntry>> GetTrackerAsync(CancellationToken ct = default);
+
+/// <summary>
+///     Starts the tracker asynchronously
+/// </summary>
+Task<MiteResponse<Tracker>> StartTrackerAsync(int timeEntryId, CancellationToken ct = default);
+```
+
 ### MiteUserService
 
 ```csharp
@@ -226,10 +245,10 @@ Task<MiteResponse<User>> GetCurrentUserAsync(CancellationToken ct = default);
     - [ ] Get bookmarks.
     - [ ] Get bookmark by ID.
     - [ ] Get time entries for a bookmark.
-- [ ] Tracker
-  - [ ] Get tracker.
-  - [ ] Start tracker.
-  - [ ] Stop tracker.
+- [X] Tracker
+  - [X] Get tracker.
+  - [X] Start tracker.
+  - [X] Stop tracker.
 - [X] Customers
   - [X] Get all active customers. 
   - [X] Get archived customers.
