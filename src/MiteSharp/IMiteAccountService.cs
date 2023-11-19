@@ -15,6 +15,6 @@ namespace MiteSharp
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns>Mite response with account information</returns>
-        Task<MiteResponse<Account>> GetAccountAsync(CancellationToken ct = default);
+        Task<MiteResponse<Account>> GetAsync(CancellationToken ct = default);
     }
 }
