@@ -29,7 +29,8 @@ Each answer is wrapped in as a `MiteResponse`. These response provides a propert
 /// <summary>
 ///     Gets the account information
 /// </summary>
-Task<MiteResponse<Account>> GetAsync(CancellationToken ct = default);
+Task<MiteResponse<Account>> GetAsync(
+  CancellationToken ct = default);
 ```
 
 ### MiteBookmarkService
@@ -38,12 +39,15 @@ Task<MiteResponse<Account>> GetAsync(CancellationToken ct = default);
 /// <summary>
 ///     Gets all bookmarks asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Bookmark>>> GetAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Bookmark>>> GetAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets a bookmark by ID asyncrhonously
 /// </summary>
-Task<MiteResponse<Bookmark>> GetById(int bookmarkId, CancellationToken ct = default);
+Task<MiteResponse<Bookmark>> GetById(
+  int bookmarkId, 
+  CancellationToken ct = default);
 
 ```
 
@@ -53,42 +57,57 @@ Task<MiteResponse<Bookmark>> GetById(int bookmarkId, CancellationToken ct = defa
 /// <summary>
 ///     Creates a new customer asynchronously
 /// </summary>
-Task<MiteResponse<Customer>> CreateAsync(CustomerRequest customerRequest, CancellationToken ct = default);
+Task<MiteResponse<Customer>> CreateAsync(
+  CustomerRequest customerRequest, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Deletes a customer asynchronously
 /// </summary>
-Task<MiteResponse<bool>> DeleteAsync(int customerId, CancellationToken ct = default);
+Task<MiteResponse<bool>> DeleteAsync(
+  int customerId, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all active customers asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Customer>>> GetAllActiveAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Customer>>> GetAllActiveAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all active customers with a specific name asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Customer>>> GetAllActiveByNameAsync(string name, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Customer>>> GetAllActiveByNameAsync(
+  string name, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived customers asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Customer>>> GetAllArchivedAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Customer>>> GetAllArchivedAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived customers with a specific name asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Customer>>> GetAllArchivedByNameAsync(string name, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Customer>>> GetAllArchivedByNameAsync(
+  string name, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets a customer by ID asynchronously
 /// </summary>
-Task<MiteResponse<Customer>> GetByIdAsync(int customerId, CancellationToken ct = default);
+Task<MiteResponse<Customer>> GetByIdAsync(
+  int customerId, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Updates a customer asynchronously
 /// </summary>
-Task<MiteResponse<Customer>> UpdateAsync(int customerId, CustomerRequest customerRequest, CancellationToken ct = default);
+Task<MiteResponse<Customer>> UpdateAsync(
+  int customerId, 
+  CustomerRequest customerRequest,
+   CancellationToken ct = default);
 ```
 
 ### MiteProjectService
@@ -97,42 +116,57 @@ Task<MiteResponse<Customer>> UpdateAsync(int customerId, CustomerRequest custome
 /// <summary>
 ///     Creates a new project asynchronously
 /// </summary>
-Task<MiteResponse<Project>> CreateAsync(ProjectRequest projectRequest, CancellationToken ct = default);
+Task<MiteResponse<Project>> CreateAsync(
+  ProjectRequest projectRequest, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Deletes a project asynchronously
 /// </summary>
-Task<MiteResponse<bool>> DeleteAsync(int projectId, CancellationToken ct = default);
+Task<MiteResponse<bool>> DeleteAsync(
+  int projectId, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all active projects asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Project>>> GetAllActiveAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Project>>> GetAllActiveAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all active projects with a specific name asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Project>>> GetAllActiveByNameAsync(string name, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Project>>> GetAllActiveByNameAsync(
+  string name, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived projects asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Project>>> GetAllArchivedAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Project>>> GetAllArchivedAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived projects with a specific name asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Project>>> GetAllArchivedByNameAsync(string name, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Project>>> GetAllArchivedByNameAsync(
+  string name, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets a project by ID asynchronously
 /// </summary>
-Task<MiteResponse<Project>> GetByIdAsync(int projectId, CancellationToken ct = default);
+Task<MiteResponse<Project>> GetByIdAsync(
+  int projectId, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Updates a project asynchronously
 /// </summary>
-Task<MiteResponse<Project>> UpdateAsync(int projectId, ProjectRequest projectRequest, CancellationToken ct = default);
+Task<MiteResponse<Project>> UpdateAsync(
+  int projectId, 
+  ProjectRequest projectRequest, 
+  CancellationToken ct = default);
 ```
 
 ### MiteServiceService
@@ -141,42 +175,57 @@ Task<MiteResponse<Project>> UpdateAsync(int projectId, ProjectRequest projectReq
 /// <summary>
 ///     Creates a new service asynchronously
 /// </summary>
-Task<MiteResponse<Service>> CreateAsync(ServiceRequest serviceRequest, CancellationToken ct = default);
+Task<MiteResponse<Service>> CreateAsync(
+  ServiceRequest serviceRequest, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Deletes a service asynchronously
 /// </summary>
-Task<MiteResponse<bool>> DeleteAsync(int serviceId, CancellationToken ct = default);
+Task<MiteResponse<bool>> DeleteAsync(
+  int serviceId, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all active services asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Service>>> GetAllActiveAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Service>>> GetAllActiveAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all active services with a specific name asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Service>>> GetAllActiveByNameAsync(string name, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Service>>> GetAllActiveByNameAsync(
+  string name, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived services asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Service>>> GetAllArchivedAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Service>>> GetAllArchivedAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived services with a specific name asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<Service>>> GetAllArchivedByNameAsync(string name, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<Service>>> GetAllArchivedByNameAsync(
+  string name, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets a service by ID asynchronously
 /// </summary>
-Task<MiteResponse<Service>> GetByIdAsync(int serviceId, CancellationToken ct = default);
+Task<MiteResponse<Service>> GetByIdAsync(
+  int serviceId, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Updates a service asynchronously
 /// </summary>
-Task<MiteResponse<Service>> UpdateAsync(int serviceId, ServiceRequest serviceRequest, CancellationToken ct = default);
+Task<MiteResponse<Service>> UpdateAsync(
+  int serviceId, 
+  ServiceRequest serviceRequest,
+  CancellationToken ct = default);
 ```
 
 ### MiteTrackerService
@@ -185,17 +234,22 @@ Task<MiteResponse<Service>> UpdateAsync(int serviceId, ServiceRequest serviceReq
 /// <summary>
 ///     Stops the tracker asynchronously
 /// </summary>
-Task<MiteResponse<StoppedTimeEntry>> StopTrackerAsync(int timeEntryId, CancellationToken ct = default);
+Task<MiteResponse<StoppedTimeEntry>> StopTrackerAsync(
+  int timeEntryId, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets the tracker asynchronously
 /// </summary>
-Task<MiteResponse<TrackingTimeEntry>> GetTrackerAsync(CancellationToken ct = default);
+Task<MiteResponse<TrackingTimeEntry>> GetTrackerAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Starts the tracker asynchronously
 /// </summary>
-Task<MiteResponse<Tracker>> StartTrackerAsync(int timeEntryId, CancellationToken ct = default);
+Task<MiteResponse<Tracker>> StartTrackerAsync(
+  int timeEntryId, 
+  CancellationToken ct = default);
 ```
 
 ### MiteUserService
@@ -204,42 +258,55 @@ Task<MiteResponse<Tracker>> StartTrackerAsync(int timeEntryId, CancellationToken
 /// <summary>
 ///     Gets all active users asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<User>>> GetAllActiveAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<User>>> GetAllActiveAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all active users with a specific email asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<User>>> GetAllActiveByEmailAsync(string email, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<User>>> GetAllActiveByEmailAsync(
+  string email, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all active users with a specific name asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<User>>> GetAllActiveByNameAsync(string name, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<User>>> GetAllActiveByNameAsync(
+  string name, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived users asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<User>>> GetAllArchivedAsync(CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<User>>> GetAllArchivedAsync(
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived users with a specific email asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<User>>> GetAllArchivedByEmailAsync(string email, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<User>>> GetAllArchivedByEmailAsync(
+  string email, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets all archived users with a specific name asynchronously
 /// </summary>
-Task<MiteResponse<IEnumerable<User>>> GetAllArchivedByNameAsync(string name, CancellationToken ct = default);
+Task<MiteResponse<IEnumerable<User>>> GetAllArchivedByNameAsync(
+  string name, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets a user by ID asynchronously
 /// </summary>
-Task<MiteResponse<User>> GetByIdAsync(int userId, CancellationToken ct = default);
+Task<MiteResponse<User>> GetByIdAsync(
+  int userId, 
+  CancellationToken ct = default);
 
 /// <summary>
 ///     Gets the current user asynchronously
 /// </summary>
-Task<MiteResponse<User>> GetCurrentUserAsync(CancellationToken ct = default);
+Task<MiteResponse<User>> GetCurrentUserAsync(
+  CancellationToken ct = default);
 ```
 
 
