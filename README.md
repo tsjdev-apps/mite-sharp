@@ -29,7 +29,22 @@ Each answer is wrapped in as a `MiteResponse`. These response provides a propert
 /// <summary>
 ///     Gets the account information
 /// </summary>
-Task<MiteResponse<Account>> GetAccountAsync(CancellationToken ct = default);
+Task<MiteResponse<Account>> GetAsync(CancellationToken ct = default);
+```
+
+### MiteBookmarkService
+
+```csharp
+/// <summary>
+///     Gets all bookmarks asynchronously
+/// </summary>
+Task<MiteResponse<IEnumerable<Bookmark>>> GetAsync(CancellationToken ct = default);
+
+/// <summary>
+///     Gets a bookmark by ID asyncrhonously
+/// </summary>
+Task<MiteResponse<Bookmark>> GetById(int bookmarkId, CancellationToken ct = default);
+
 ```
 
 ### MiteCustomerService
@@ -242,8 +257,8 @@ Task<MiteResponse<User>> GetCurrentUserAsync(CancellationToken ct = default);
     - [ ] Update a time entry.
     - [ ] Delete a time entry.
   - [ ] Bookmarks
-    - [ ] Get bookmarks.
-    - [ ] Get bookmark by ID.
+    - [X] Get bookmarks.
+    - [X] Get bookmark by ID.
     - [ ] Get time entries for a bookmark.
 - [X] Tracker
   - [X] Get tracker.

@@ -30,7 +30,7 @@ namespace MiteSharp
 
 
         /// <inheritdoc />
-        public async Task<MiteResponse<Account>> GetAccountAsync(CancellationToken ct = default)
+        public async Task<MiteResponse<Account>> GetAsync(CancellationToken ct = default)
         {
             return await ExecuteRequestAsync(async () =>
             {
